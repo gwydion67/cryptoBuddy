@@ -1,8 +1,22 @@
-# React + Vite
+#CryptoBuddy (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for CryptoBuddy.
+Steps to Deploy:
+- clone the repository:
+```bash
+git clone https://github.com/gwydion67/cryptobuddy.git
+```
+- install dependencies:
+```bash
+npm install
+```
+- build the project:
+```bash
+npm run build
+```
+>> or you can run in development mode:
+>>```bash
+>>npm run dev
+>>```
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+now start the backend server from ther server directory.
