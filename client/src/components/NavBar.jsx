@@ -18,7 +18,7 @@ const NavButtons = ({ selected, setSelected, buttons }) => {
       {buttons.map((item, index) => (
         <div>
           <p
-            style={index == selected ? styles.selectedStyle : {marginLeft: 10,marginRight: 10}}
+            style={index == selected ? styles.selectedStyle : {marginLeft: '1vw',marginRight: '1vw'}}
             onClick={() => handlePress(index)}
           >
             {item}
@@ -40,11 +40,14 @@ const Navbar = ({active, setActive, buttons}) => {
   }
 
   return (
-    <div style={styles.container} >
-      <img height={60} src="/Logo.png" /> 
-      <NavButtons buttons={buttons} selected={active} setSelected={setActive} />
-      <FaRegUserCircle onClick={handleProfilePress} size={28} />
-    </div>
+    <>
+      <div style={styles.container} >
+        <img onClick={() => {console.log('hi'); setActive(0)}} height={60} src="/Logo.png" /> 
+        <NavButtons buttons={buttons} selected={active} setSelected={setActive} />
+        <FaRegUserCircle onClick={handleProfilePress} size={28} />
+      </div>
+      <div style={styles.separator} />
+    </>
   )
 }
 
@@ -53,13 +56,12 @@ export default Navbar;
 const styles = Stylesheet.create({
   container: {
     display: 'flex',
-    padding: 10,
     alignItems: 'center',
     justifyContent: 'space-between',
   },
   selectedStyle: {
-    paddingLeft : 10,
-    paddingRight : 10,
+    paddingLeft : '1vw',
+    paddingRight : '1vw',
     color: 'white',
     fontWeight: 500,
   },
@@ -73,6 +75,14 @@ const styles = Stylesheet.create({
     height: 3,
     backgroundColor: 'yellow',
     borderRadius: 15,
+  },
+  separator:{
+    height: 1,
+    backgroundColor: 'rgba(200,200,200,0.4)',
+    width: '95%',
+    margin:'auto',
+    marginBottom: 15,
+    marginTop: 15,
   }
 
 })

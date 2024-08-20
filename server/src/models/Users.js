@@ -6,6 +6,16 @@ const userSchema = new mongoose.Schema({
     required: true,
     unique: true
   },
+  owned:[{
+    name: {
+      type: String,
+      required: true
+    },
+    amount: {
+      type: Number,
+      required: true
+    }
+  }],
   watchlist: [{
     type: String
   }]
